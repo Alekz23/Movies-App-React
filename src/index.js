@@ -1,17 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+/* const Componente=(props)=>{
+  console.log(props)
+
+  // manera de obtener los atributos del objeto props
+  //const titulo= props.titulo;
+  //const contenido= props.contenido;
+
+  //2da forma por Structs------------
+  const {titulo, contenido}= props;
+
+  return (<div>
+          <h1>{titulo}</h1>
+          <div>{contenido}</div>
+          </div>);
+} */
+
+// destructirar el objeto de props de manera directa en los parametros
+/* const Componente=({titulo, children})=>{
+  return (<div>
+          <h1>{titulo}</h1>
+          <div>{children}</div>
+          </div>);
+} */
+
+
+//renderizar elementos(etiquetas html)
+// el contenido dentro de las etiquetas son hijos---(hola desde props)
+//ReactDOM.render( <Componente titulo="New Titulo">hola desde props contenido</Componente>,
+ReactDOM.render( <App/>,
+ document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
